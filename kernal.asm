@@ -1,0 +1,46 @@
+; Tabella salti del Kernal
+
+!ifndef __KERNAL__ {
+__KERNAL__        = 1
+
+CINT              = $FF81       ; Inizializza il chip VIC-II e l'editor di schermo (altera A, X e Y)
+IOINIT            = $FF84       ; Inizializza i dispositivi I/O (altera A, X e Y)
+RAMTAS            = $FF87       ; Esegui un test della RAM (altera A, X e Y)
+RESTOR            = $FFBA       ; Ripristina i vettori di interruzione e di sistema (altera A, X e Y)
+VECTOR            = $FF8D       ; Copia tutti i vettori del Kernal da/verso la RAM (altera A, X e Y)
+SETMSG            = $FF90       ; Controlla l'output dei messaggi di sistema (altera A)
+SECOND            = $FF93       ; Imposta l'indirizzo secondario per LISTEN (altera A)
+TKSA              = $FF96       ; Imposta l'indirizzo secondario per TALK (altera A)
+MEMTOP            = $FF99       ; Imposta l'indirizzo finale della memoria BASIC (altera X e Y)
+MEMBOT            = $FF9C       ; Imposta l'indirizzo iniziale della memoria BASIC (altera X e Y)
+SCNKEY            = $FF9F       ; Scansiona la tastiera (altera A, X e Y)
+SETTMO            = $FFA2       ; Imposta il flag di timeout della scheda d'interfaccia IEEE (altera A)
+ACPTR             = $FFA5       ; Leggi un byte dal bus seriale (altera A e X)
+CIOUT             = $FFA8       ; Trasmetti un byte sul bus seriale
+UNTLK             = $FFAB       ; Disconnetti tutti i dispositivi sul bus seriale che sono in modalità di trasmissione (altera A)
+UNLSN             = $FFAE       ; Disconnetti tutti i dispositivi sul bus seriale che sono in modalità di ricezione (altera A)
+LISTEN            = $FFB1       ; Poni un dispositivo seriale in ricezione (altera A)
+TALK              = $FFB4       ; Poni un dispositivo seriale in trasmissione (altera A)
+READST            = $FFB7       ; Leggi lo stato di un dispositivo I/O (altera A)
+SETLFS            = $FFBA       ; Imposta un file logico (altera A, X e Y)
+SETNAM            = $FFBD       ; Imposta il nome del file (altera A, X e Y)
+OPEN              = $FFC0       ; Apri un file logico (altera A, X e Y)
+CLOSE             = $FFC3       ; Chiudi un file logico (altera A, X e Y)
+CHKIN             = $FFC6       ; Apri un canale in ingresso (altera A e X)
+CHKOUT            = $FFC9       ; Apri un canale in uscita (altera A e X)
+CLRCHN            = $FFCC       ; Resetta tutti i canali di I/O (altera A e X)
+CHRIN             = $FFCF       ; Leggi un carattere dal canale di ingresso (altera A e X)
+CHROUT            = $FFD2       ; Scrivi un carattere nel canale di uscita (altera A)
+LOAD              = $FFD5       ; Carica bytes da un dispositivo (altera A, X e Y)
+SAVE              = $FFD8       ; Salva bytes su un dispositivo (altera A, X e Y)
+SETTIM            = $FFDB       ; Imposta il clock di sistema (altera A, X e Y)
+RDTIM             = $FFDE       ; Leggi l'orologio di sistema (altera A, X e Y)
+STOP              = $FFE1       ; Leggi lo stato del tasto RUN/STOP (altera A)
+GETIN             = $FFE4       ; Leggi un carattere dalla tastiera (altera A, X e Y)
+CLALL             = $FFE7       ; Chiudi tutti i files (altera A e X)
+UDTIM             = $FFEA       ; Aggiorna il clock di sistema (altera A e X)
+SCREEN            = $FFED       ; Recupera le dimensioni dello schermo (altera X e Y)
+PLOT              = $FFF0       ; Posiziona il cursore (altera A, X e Y)
+IOBASE            = $FFF3       ; Ricava l'indirizzo di base della memoria I/O (altera X e Y)
+
+}
