@@ -198,7 +198,7 @@ KRNROM            = $E000       ; Indirizzo di base della ROM del Kernal
 POLY1             = $E043       ; Calcola un polinomio dispari di grado n in FAC
 POLY2             = $E059       ; Calcola un polinomio generico di grado n in FAC
 EREXIT            = $E0F9
-SLPARA            = $E1D4
+SLPARA            = $E1D4       ; Decodifica i parametri di LOAD/SAVE/VERIFY dallo stream di input e prepara l'I/O
 COS               = $E264       ; FAC = COS(FAC)
 SIN               = $E26B       ; FAC = SIN(FAC)
 TAN               = $E2B4       ; FAC = TAN(FAC)
