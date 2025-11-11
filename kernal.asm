@@ -1,8 +1,5 @@
 ; Tabella salti del Kernal
 
-!ifndef __KERNAL__ {
-__KERNAL__        = 1
-
 CINT              = $FF81       ; Inizializza il chip VIC-II e l'editor di schermo (altera A, X e Y)
 IOINIT            = $FF84       ; Inizializza i dispositivi I/O (altera A, X e Y)
 RAMTAS            = $FF87       ; Esegui un test della RAM (altera A, X e Y)
@@ -42,5 +39,3 @@ UDTIM             = $FFEA       ; Aggiorna il clock di sistema (altera A e X)
 SCREEN            = $FFED       ; Recupera le dimensioni dello schermo (altera X e Y)
 PLOT              = $FFF0       ; Posiziona il cursore (altera A, X e Y)
 IOBASE            = $FFF3       ; Ricava l'indirizzo di base della memoria I/O (altera X e Y)
-
-}

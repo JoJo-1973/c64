@@ -1,9 +1,6 @@
 ; Codici della matrice della tastiera
 ;
-; Opzioni: C128_C64_MODE = 1    Aggiunge il supporto per i registri extra usati nella versione del chip installata sul C128
-
-!ifndef __C64_KEYBOARD__ {
-__C64_KEYBOARD__  = 1
+; Opzioni: __C128_C64_MODE = 1    Aggiunge il supporto per i registri extra usati nella versione del chip installata sul C128
 
 KBD_INST_DEL      = 0
 KBD_RETURN        = 1
@@ -71,7 +68,7 @@ KBD_Q             = 62
 KBD_RUN_STOP      = 63
 KBD_NO_KEY        = 64
 
-!ifdef C128_C64_MODE {
+!ifdef __C128_C64_MODE {
   KBD_HELP        = 64
   KBD_KEYPAD_8    = 65
   KBD_KEYPAD_5    = 66
@@ -97,6 +94,4 @@ KBD_NO_KEY        = 64
   KBD_RIGHT       = 86
   KBD_NO_SCROLL   = 87
   KBD_NO_KEY_EXTRA= 88
-}
-
 }
