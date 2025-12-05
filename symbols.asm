@@ -171,6 +171,7 @@ MOVAF             = $BC0C       ; Copia FAC in ARG (con arrotondamento)
 MOVEF             = $BC0F       ; Copia FAC in ARG (senza arrotondamento)
 ROUND             = $BC1B       ; Arrotonda FAC a seconda del valore di FACOV
 SIGN              = $BC2B       ; Restituisci il segno di FAC in .A
+FLOATB            = $BC4F       ; Normalizza FAC
 FCOMP             = $BC5B       ; Confronta FAC con un numero float presente in memoria
 QINT              = $BC9B       ; Converte FAC in un intero di 4 byte con segno
 INT               = $BCCC       ; Tronca FAC ad un intero
