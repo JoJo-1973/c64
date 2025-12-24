@@ -45,9 +45,11 @@ FACOV             = $70         ; Byte di precisione extra per l'accumulatore in
 CHRGET            = $73         ; Leggi il prossimo carattere nel testo di un programma BASIC
 CHRGOT            = $79         ; Rileggi l'ultimo carattere nel testo di un programma BASIC
 TXTPTR            = $7A         ; Puntatore al carattere attualmente letto
+RNDX              = $8B         ; Seme del generatore di numeri casuali del BASIC
 
 ; Pagina 0 - KERNAL
 STATUS            = $90         ; Stato I/O del Kernal
+STKEY             = $91         ; Flag: Premuto tasto STOP?
 TIME              = $A0         ; Orologio jiffy (da TIME+0 a TIME+2)
 LA                = $B8         ; Numero di file in uso
 SA                = $B9         ; Indirizzo secondario I/O in uso
@@ -202,6 +204,7 @@ KRNROM            = $E000       ; Indirizzo di base della ROM del Kernal
 
 POLY1             = $E043       ; Calcola un polinomio dispari di grado n in FAC
 POLY2             = $E059       ; Calcola un polinomio generico di grado n in FAC
+RND               = $E097       ; Genera il prossimo numero casuale e mettilo in FAC
 EREXIT            = $E0F9
 SLPARA            = $E1D4       ; Decodifica i parametri di LOAD/SAVE/VERIFY dallo stream di input e prepara l'I/O
 COS               = $E264       ; FAC = COS(FAC)
