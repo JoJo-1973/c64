@@ -39,3 +39,17 @@ UDTIM             = $FFEA       ; Aggiorna il clock di sistema (altera A e X)
 SCREEN            = $FFED       ; Recupera le dimensioni dello schermo (altera X e Y)
 PLOT              = $FFF0       ; Posiziona il cursore (altera A, X e Y)
 IOBASE            = $FFF3       ; Ricava l'indirizzo di base della memoria I/O (altera X e Y)
+
+; Codici d'errore del Kernal
+
+K_ERR_BREAK                 = $00
+K_ERR_TOO_MANY_FILES        = $01
+K_ERR_FILE_OPEN             = $02
+K_ERR_FILE_NOT_OPEN         = $03
+K_ERR_FILE_NOT_FOUND        = $04
+K_ERR_DEVICE_NOT_PRESENT    = $05
+K_ERR_NOT_INPUT_FILE        = $06
+K_ERR_NOT_OUTPUT_FILE       = $07
+K_ERR_MISSING_FILENAME      = $08
+K_ERR_ILLEGAL_DEVICE_NUMBER = $09
+K_ERR_MOVED_RS232_BUFFER    = $F0
