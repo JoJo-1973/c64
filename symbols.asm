@@ -171,7 +171,7 @@ TENC              = $BAF9       ; Valore della costante 10 in virgola mobile
 FDIVT             = $BB12       ; FAC = ARG / FAC
 MOVFM             = $BBA2       ; Carica FAC con un numero float presente in memoria
 MOV2F             = $BBC7       ; Copia FAC in memoria
-MOVMF             = $BBD4
+MOVMF             = $BBD4       ; Arrotonda FAC e copialo in memoria
 MOVFA             = $BBFC       ; Copia ARG in FAC
 MOVAF             = $BC0C       ; Copia FAC in ARG (con arrotondamento)
 MOVEF             = $BC0F       ; Copia FAC in ARG (senza arrotondamento)
@@ -183,7 +183,7 @@ QINT              = $BC9B       ; Converte FAC in un intero di 4 byte con segno
 INT               = $BCCC       ; Tronca FAC ad un intero
 FIN               = $BCF3       ; Converti una stringa ASCII in un numero in virgola mobile (FAC)
 LINPRT            = $BDCD       ; Stampa un numero decimale contenuto in .A/.X
-FOUT              = $BDDD       ; Converti l'accumulatore in virgola mobile #1 in una stringa ASCII
+FOUT              = $BDDD       ; Converti FAC in una stringa ASCII
 FHALF             = $BF11       ; Valore della costante 0.5 in virgola mobile
 SQR               = $BF71       ; FAC = SQR(FAC)
 FPWRT             = $BF7B       ; FAC = ARG ^ FAC
