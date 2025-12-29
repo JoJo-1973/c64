@@ -45,7 +45,7 @@ FACOV             = $70         ; Byte di precisione extra per l'accumulatore in
 CHRGET            = $73         ; Leggi il prossimo carattere nel testo di un programma BASIC
 CHRGOT            = $79         ; Rileggi l'ultimo carattere nel testo di un programma BASIC
 TXTPTR            = $7A         ; Puntatore al carattere attualmente letto
-RNDX              = $8B         ; Seme del generatore di numeri casuali del BASIC
+RNDX              = $8B         ; Seme del generatore di numeri casuali del BASIC (da RNDX+0 a RNDX+4)
 
 ; Pagina 0 - KERNAL
 STATUS            = $90         ; Stato I/O del Kernal
@@ -151,23 +151,27 @@ AYINT             = $B1BF       ; Converti un numero in virgola mobile in un int
 FCERR             = $B248       ; Esci con l'errore "?ILLEGAL QUANTITY"
 GIVAYF            = $B391       ; Converti intero a 16 bit con segno in numero a virgola mobile
 STRLIT            = $B487       ; Prepara i puntatori per una stringa in memoria
-FREFAC            = $B6A6
-GETBYT            = $B79E
+FRESTR            = $B6A3       ; Controlla che FAC punti ad una stringa e poi...
+FREFAC            = $B6A6       ; ...Dealloca una stringa temporanea
+GTBYTC            = $B79B       ; Leggi il prossimo carattere dallo stream di input...
+GETBYT            = $B79E       ; ...poi convertilo in un intero tra 0 e 255 e mettilo in .X
 GETNUM            = $B7EB       ; Estrai un parametro a 16 bit ed uno ad 8 bit separati da una virgola dal testo del BASIC
-COMBYT            = $B7F1
-GETADR            = $B7F7       ; Converti un numero in virgola mobile in intero privo di segno
+COMBYT            = $B7F1       ; Controlla la presenza di una virgola nello stream di input ed estrai il seguente valore ad 8 bit
+GETADR            = $B7F7       ; Converti un numero in virgola mobile in intero tra 0 e 65535
 FADDH             = $B849       ; Somma 0.5 al numero contenuto in FAC
+FSUB              = $B850       ; FAC = MEM - FAC
 FSUBT             = $B853       ; FAC = ARG - FAC
-FADD              = $B867
+FADD              = $B867       ; FAC = MEM + FAC
 FADDT             = $B86A       ; FAC = ARG + FAC
 FONE              = $B9BC       ; Valore della costante 1 in virgola mobile
 FSQR2             = $B9DB       ; Valore della costante SQR(2) in virgola mobile
 FLOG2             = $B9E5       ; Valore della costante LOG(2) in virgola mobile
 LOG               = $B9EA       ; FAC = LOG(FAC)
-FMULT             = $BA28
+FMULT             = $BA28       ; FAC = MEM * FAC
 FMULTT            = $BA2B       ; FAC = ARG * FAC
-CONUPK            = $BA8C       ; Carica ARG con un numero float presente in memoria
+CONUPK            = $BA8C       ; Carica ARG con un numero float presente all'indirizzo .A/.Y
 TENC              = $BAF9       ; Valore della costante 10 in virgola mobile
+FDIV              = $BB0F       ; FAC = MEM / FAC
 FDIVT             = $BB12       ; FAC = ARG / FAC
 MOVFM             = $BBA2       ; Carica FAC con un numero float presente in memoria
 MOV2F             = $BBC7       ; Copia FAC in memoria
@@ -177,6 +181,7 @@ MOVAF             = $BC0C       ; Copia FAC in ARG (con arrotondamento)
 MOVEF             = $BC0F       ; Copia FAC in ARG (senza arrotondamento)
 ROUND             = $BC1B       ; Arrotonda FAC a seconda del valore di FACOV
 SIGN              = $BC2B       ; Restituisci il segno di FAC in .A
+SGN               = $BC39       ; Sostituisci FAC con il suo segno
 FLOATB            = $BC4F       ; Normalizza FAC
 FCOMP             = $BC5B       ; Confronta FAC con un numero float presente in memoria
 QINT              = $BC9B       ; Converte FAC in un intero di 4 byte con segno
@@ -205,7 +210,7 @@ KRNROM            = $E000       ; Indirizzo di base della ROM del Kernal
 POLY1             = $E043       ; Calcola un polinomio dispari di grado n in FAC
 POLY2             = $E059       ; Calcola un polinomio generico di grado n in FAC
 RND               = $E097       ; Genera il prossimo numero casuale e mettilo in FAC
-EREXIT            = $E0F9
+EREXIT            = $E0F9       ; Converti una condizione d'errore del Kernal in una condizione d'errore del BASIC
 SLPARA            = $E1D4       ; Decodifica i parametri di LOAD/SAVE/VERIFY dallo stream di input e prepara l'I/O
 COS               = $E264       ; FAC = COS(FAC)
 SIN               = $E26B       ; FAC = SIN(FAC)
