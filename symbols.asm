@@ -156,7 +156,7 @@ GETBYT            = $B79E
 GETNUM            = $B7EB       ; Estrai un parametro a 16 bit ed uno ad 8 bit separati da una virgola dal testo del BASIC
 COMBYT            = $B7F1
 GETADR            = $B7F7       ; Converti un numero in virgola mobile in intero privo di segno
-FADDH             = $B849       ; Somma 0.5 al numero contenuto nell'accumulatore in virgola mobile #1
+FADDH             = $B849       ; Somma 0.5 al numero contenuto in FAC
 FSUBT             = $B853       ; FAC = ARG - FAC
 FADD              = $B867
 FADDT             = $B86A       ; FAC = ARG + FAC
