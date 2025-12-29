@@ -134,7 +134,7 @@ ERROR             = $A437       ; Gestore degli errori del BASIC
 READY             = $A474       ; Esce nel BASIC stampando "READY."
 NEWSTT            = $A7AE       ; Prepara la prossima istruzione per l'esecuzione
 GONE              = $A7E4       ; Decodifica ed esegui la prossima istruzione
-STROUT            = $AB1E       ; Stampa la stringa puntata da .A / .Y
+STROUT            = $AB1E       ; Stampa la stringa puntata da .A/.Y
 FRMNUM            = $AD8A       ; Valuta un'espressione numerica
 FRMEVL            = $AD9E       ; Valuta un'espressione numerica oppure stringa
 PIVAL             = $AEA8       ; Valore della costante π in virgola mobile
@@ -146,8 +146,8 @@ SYNCHR            = $AEFF       ; Verifica la presenza del carattere in .A e poi
 OROP              = $AFE6       ; FAC = ARG OR FAC
 ANDOP             = $AFE9       ; FAC = ARG AND FAC
 N32768            = $B1A5       ; Valore della costante -32768 in virgola mobile
-GIVFAY            = $B1AA       ; Converti un numero in virgola mobile in un intero con segno in .A /.Y
-AYINT             = $B1BF       ; Converti un numero in virgola mobile in un intero con segno in FACMO / FACLO
+GIVFAY            = $B1AA       ; Converti un numero in virgola mobile in un intero con segno in .A/.Y
+AYINT             = $B1BF       ; Converti un numero in virgola mobile in un intero con segno in FACMO/FACLO
 FCERR             = $B248       ; Esci con l'errore "?ILLEGAL QUANTITY"
 GIVAYF            = $B391       ; Converti intero a 16 bit con segno in numero a virgola mobile
 STRLIT            = $B487       ; Prepara i puntatori per una stringa in memoria
@@ -229,5 +229,5 @@ IRQROUT           = $FF48       ; Instradatore delle interruzioni IRQ/BRK
 
 ; Vettori hardware del 6510
 NMIVEC            = $FFFA       ; Vettore NMI
-RESVEC            = $FFFC       ; Vettore reset
-IRBVEC            = $FFFE       ; Vettore IRQ / BRK
+RESVEC            = $FFFC       ; Vettore Reset
+IRBVEC            = $FFFE       ; Vettore IRQ/BRK
