@@ -5,7 +5,7 @@
 ; Pagina 0
 D6510             = $00         ; Registro direzione dati del chip 6510
 R6510             = $01         ; Registro porte dati del chip 6510
-TEMP_1            = $02         ; Locazione non usata #1
+UNUSED            = $02         ; Locazione non usata #1
 
 ; Pagina 0 - BASIC
 VERCK             = $0A         ; Flag usato dal BASIC per differenziare LOAD (0) da VERIFY (1)
@@ -109,7 +109,7 @@ SYREG             = $030E       ; Area di memorizzazione del registro .Y
 SPREG             = $030F       ; Area di memorizzazione del registro .P
 USRPOK            = $0310       ; Punto d'ingresso per la funzione USR()
 USRADD            = $0311       ; Indirizzo funzione USR()
-TEMP_2            = $0313       ; Locazione non usata #2
+UNUSE2            = $0313       ; Locazione non usata #2
 CINV              = $0314       ; Vettore routine interrupt IRQ
 CBINV             = $0316       ; Vettore routine interrupt BRK
 NMINV             = $0318       ; Vettore routine interrupt NMI
