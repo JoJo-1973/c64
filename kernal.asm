@@ -3,7 +3,7 @@
 CINT              = $FF81       ; Inizializza il chip VIC-II e l'editor di schermo (altera A, X e Y)
 IOINIT            = $FF84       ; Inizializza i dispositivi I/O (altera A, X e Y)
 RAMTAS            = $FF87       ; Esegui un test della RAM (altera A, X e Y)
-RESTOR            = $FFBA       ; Ripristina i vettori di interruzione e di sistema (altera A, X e Y)
+RESTOR            = $FF8A       ; Ripristina i vettori di interruzione e di sistema (altera A, X e Y)
 VECTOR            = $FF8D       ; Copia tutti i vettori del Kernal da/verso la RAM (altera A, X e Y)
 SETMSG            = $FF90       ; Controlla l'output dei messaggi di sistema (altera A)
 SECOND            = $FF93       ; Imposta l'indirizzo secondario per LISTEN (altera A)
