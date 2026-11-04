@@ -33,8 +33,8 @@ ARYTAB              = $2F           ; Puntatore all'inizio dell'area Matrici
 STREND              = $31           ; Puntatore alla fine dell'area Matrici (+1) ed inizio della memoria libera
 FRETOP              = $33           ; Puntatore alla fine dell'area Stringhe
 MEMSIZ              = $37           ; Puntatore alla fine dell'area BASIC
-JMPER               = $54           ; Istruzione JMP usata dalla routine di valutazione delle funzioni matematiche
-NUMWRK              = $57           ; Area di lavoro utilizzata da varie routines numeriche del BASIC (da NUMWRK+0 a NUMWRK+10)
+JMPER               = $54           ; Istruzione JMP usata dalla subroutine di valutazione delle funzioni matematiche
+NUMWRK              = $57           ; Area di lavoro utilizzata da varie subroutine numeriche del BASIC (da NUMWRK+0 a NUMWRK+10)
 
 FAC                 = $61           ; Accumulatore in virgola mobile #1
 FACEXP              = FAC           ; Accumulatore in virgola mobile #1: Esponente
@@ -79,8 +79,8 @@ BLNCT               = $CD           ; Temporizzatore del lampeggio del cursore
 BLNON               = $CF           ; Ultimo lampeggio del cursore era on oppure off?
 PNTR                = $D3           ; Posizione orizzontale del cursore (linea logica)
 QTSW                = $D4           ; Modo virgolette attivo?
+TBLX                = $D6           ; Posizione verticale del cursore
 INSRT               = $D8           ; Modo INSERT attivo?
-TBLX                = $D9           ; Posizione verticale del cursore
 
 ; ------------------------------------------------------------------------------
 ; Puntatori utente in pagina 0
@@ -115,7 +115,7 @@ KOUNT               = $028B         ; Ritardo tra ripetizioni automatiche dei ca
 DELAY               = $028C         ; Ritardo per la prima ripetizione automatica di caratteri digitati
 SHFLAG              = $028D         ; Flag digitazione tasti Shift/CTRL/Commodore
 LSTSHF              = $028E         ; Ultima combinazione tasti Shift/CTRL/Commodore premuta
-KEYLOG              = $028F         ; Vettore alla routine di inizializzazione della tavola di decodifica tastiera
+KEYLOG              = $028F         ; Vettore alla subroutine di inizializzazione della tavola di decodifica tastiera
 MODE                = $0291         ; Abilita (0) o disabilita (128) la combinazione Shift+Commodore
 PALFLG              = $02A6         ; Se <>0 allora l'output video è PAL
 FREMEM              = $02A7         ; Memoria libera (da FREMEM+0 a FREMEM+88)
@@ -124,12 +124,12 @@ FREMEM              = $02A7         ; Memoria libera (da FREMEM+0 a FREMEM+88)
 ; Pagina 3
 ; ------------------------------------------------------------------------------
 
-IERROR              = $0300         ; Vettore routine di stampa messaggi d'errore
+IERROR              = $0300         ; Vettore alla subroutine di stampa messaggi d'errore
 IMAIN               = $0302         ; Vettore al loop principale del BASIC
-ICRNCH              = $0304         ; Vettore routine di tokenizzazione
-IQPLOP              = $0306         ; Vettore routine di de-tokenizzazione
-IGONE               = $0308         ; Vettore routine di esecuzione prossima istruzione BASIC
-IEVAL               = $030A         ; Vettore routine di valutazione espressione numerica
+ICRNCH              = $0304         ; Vettore alla subroutine di tokenizzazione
+IQPLOP              = $0306         ; Vettore alla subroutine di de-tokenizzazione
+IGONE               = $0308         ; Vettore alla subroutine di esecuzione prossima istruzione BASIC
+IEVAL               = $030A         ; Vettore alla subroutine di valutazione espressione numerica
 SAREG               = $030C         ; Area di memorizzazione del registro .A
 SXREG               = $030D         ; Area di memorizzazione del registro .X
 SYREG               = $030E         ; Area di memorizzazione del registro .Y
@@ -137,9 +137,9 @@ SPREG               = $030F         ; Area di memorizzazione del registro .P
 USRPOK              = $0310         ; Punto d'ingresso per la funzione USR()
 USRADD              = $0311         ; Indirizzo funzione USR()
 UNUSE2              = $0313         ; Locazione non usata #2
-CINV                = $0314         ; Vettore routine interrupt IRQ
-CBINV               = $0316         ; Vettore routine interrupt BRK
-NMINV               = $0318         ; Vettore routine interrupt NMI
+CINV                = $0314         ; Vettore alla subroutine di interrupt IRQ
+CBINV               = $0316         ; Vettore alla subroutine di interrupt BRK
+NMINV               = $0318         ; Vettore alla subroutine di interrupt NMI
 FREME2              = $0334         ; Memoria libera (da FREME2+0 a FREME2+203)
 TMPPG1              = $0334         ; Memoria libera (da TMPPG1+0 a TMPPG1+7)
 TBUFFR              = $033C         ; Buffer di I/O cassetta (sicuro da usare fino a TBUFFER+191 se non si usa il registratore a cassette)

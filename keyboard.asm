@@ -3,8 +3,8 @@
 ; PROGETTO:       Libreria C64 (c64.c64)
 ; TARGET:         ACME Assembler / MOS 6510 (Commodore 64)
 ; DESCRIZIONE:    Codici della matrice della tastiera. Con __C128_C64_MODE = 1
-;                 aggiunge il supporto per i registri extra usati nella
-;                 versione del chip installata sul C128.
+;                 aggiunge il supporto per i registri extra usati nella versione
+;                 del chip installata sul C128.
 ; ==============================================================================
 
 KBD_INST_DEL        = $00
@@ -73,7 +73,7 @@ KBD_Q               = $3E
 KBD_RUN_STOP        = $3F
 KBD_NO_KEY          = $40
 
-!if (__C128_C64_MODE = 1) {     ; Codici extra del C128
+!if (__C128_C64_MODE = 1) {     ; Codici extra del C128.
   KBD_HELP          = $40
   KBD_KEYPAD_8      = $41
   KBD_KEYPAD_5      = $42
