@@ -1,6 +1,6 @@
 ; ==============================================================================
 ; FILE:           symbols.asm
-; PROGETTO:       Libreria C64 (c64.c64)
+; PROGETTO:       Libreria di Sistema (c64.c64)
 ; TARGET:         ACME Assembler / MOS 6510 (Commodore 64)
 ; DESCRIZIONE:    Mappa di memoria del Commodore 64: pagina zero, BASIC, Kernal,
 ;                 vettori di sistema e ROM.
