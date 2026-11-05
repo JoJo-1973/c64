@@ -34,7 +34,7 @@ STREND              = $31           ; Puntatore alla fine dell'area Matrici (+1)
 FRETOP              = $33           ; Puntatore alla fine dell'area Stringhe
 MEMSIZ              = $37           ; Puntatore alla fine dell'area BASIC
 JMPER               = $54           ; Istruzione JMP usata dalla subroutine di valutazione delle funzioni matematiche
-NUMWRK              = $57           ; Area di lavoro utilizzata da varie subroutine numeriche del BASIC (da NUMWRK+0 a NUMWRK+10)
+NUMWRK              = $57           ; Area di lavoro utilizzata da varie subroutine numeriche del BASIC (da NUMWRK+0 a NUMWRK+9)
 
 FAC                 = $61           ; Accumulatore in virgola mobile #1
 FACEXP              = FAC           ; Accumulatore in virgola mobile #1: Esponente
