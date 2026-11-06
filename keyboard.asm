@@ -71,7 +71,6 @@ KBD_SPACE           = $3C
 KBD_COMMODORE       = $3D
 KBD_Q               = $3E
 KBD_RUN_STOP        = $3F
-KBD_NO_KEY          = $40
 
 !if (__C128_C64_MODE = 1) {     ; Codici extra del C128.
   KBD_HELP          = $40
@@ -98,5 +97,7 @@ KBD_NO_KEY          = $40
   KBD_LEFT          = $55
   KBD_RIGHT         = $56
   KBD_NO_SCROLL     = $57
-  KBD_NO_KEY_EXTRA  = $58
+  KBD_NO_KEY        = $58
+} else {                        ; Sul C64 i codici arrivano fino a $3F.
+  KBD_NO_KEY        = $40
 }
