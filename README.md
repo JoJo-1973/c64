@@ -36,10 +36,10 @@ Questo documento deriva dai sorgenti. I file contengono solo definizioni di simb
 La cartella `c64` sta nella cartella delle librerie di C64Studio, accanto alle altre librerie di sistema. Il sorgente principale del programma include i file di simboli che gli servono nella parte dedicata ai simboli, prima del codice:
 
 ```
-!source <c64/symbols.asm>, once
-!source <c64/kernal.asm>, once
 !source <c64/errors.asm>, once
+!source <c64/kernal.asm>, once
 !source <c64/keyboard.asm>, once
+!source <c64/symbols.asm>, once
 ```
 
 I file non includono altri file. Le altre librerie dichiarano i file di simboli che richiedono nelle `Dipendenze Esterne` dei contratti d'interfaccia.
