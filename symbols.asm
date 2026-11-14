@@ -172,6 +172,8 @@ BASROM              = $A000         ; Indirizzo di base della ROM del BASIC
 
 ERROR               = $A437         ; Gestore degli errori del BASIC
 READY               = $A474         ; Esce nel BASIC stampando "READY."
+SCRTCH              = $A642         ; Esegui il comando BASIC NEW
+CLEAR               = $A65E         ; Esegui il comando BASIC CLR
 NEWSTT              = $A7AE         ; Prepara la prossima istruzione per l'esecuzione
 GONE                = $A7E4         ; Decodifica ed esegui la prossima istruzione
 STROUT              = $AB1E         ; Stampa la stringa puntata da .A/.Y
